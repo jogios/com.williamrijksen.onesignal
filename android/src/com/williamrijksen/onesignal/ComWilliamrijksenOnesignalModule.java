@@ -51,7 +51,7 @@ public class ComWilliamrijksenOnesignalModule extends KrollModule
 				.startInit(TiApplication.getInstance())
 				.setNotificationReceivedHandler(new NotificationReceivedHandler())
 				.setNotificationOpenedHandler(new NotificationOpenedHandler())
-				.inFocusDisplaying(OneSignal.OSInFocusDisplayOption.None)
+				.inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
 				.init();
 	}
 
