@@ -105,12 +105,7 @@ onesignal.addEventListener("notificationOpened", function(evt) {
         }
 
         if (evt.additionalData) {
-            if (Ti.Platform.osname === 'android') {
-                //Android receives it as a JSON string
-                data = JSON.parse(evt.additionalData);
-            } else {
-                data = evt.additionalData;
-            }
+            data = evt.additionalData;
         }
 
         alert("Notification opened! title: " + title + ', content: ' + content + ', data: ' + evt.additionalData);

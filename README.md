@@ -122,12 +122,7 @@ Before setting up the Titanium SDK, you must generate the appropriate credential
             }
 
             if (evt.additionalData) {
-                if (Ti.Platform.osname === 'android') {
-                    // Android receives it as a JSON string
-                    data = JSON.parse(evt.additionalData);
-                } else {
-                    data = evt.additionalData;
-                }
+                data = evt.additionalData;
             }
         }
         alert("Notification opened! title: " + title + ', content: ' + content + ', data: ' + evt.additionalData);
